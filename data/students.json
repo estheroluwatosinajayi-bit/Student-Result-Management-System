@@ -1,0 +1,43 @@
+[
+    {
+        "student_id": "ST001",
+        "name": "Tosin teniola Ajayi",
+        "class": "ss3",
+        "gender": "female",
+        "date_of_birth": "2008-06-12",
+        "scores": {
+            "English": 60.0,
+            "Mathematics": 79.0,
+            "Biology": 56.0,
+            "Chemistry": 100.0,
+            "Physics": 70.0
+        },
+        "total": 365.0,
+        "average": 73.0,
+        "grade": "A"
+    },
+    {
+        "student_id": "st001",
+        "name": "tosin ajayi",
+        "class": "ss2",
+        "gender": "female",
+        "date_of_birth": "2008-05-12",
+        "scores": {}
+    },
+    {
+        "student_id": "st001",
+        "name": "tosin ajayi",
+        "class": "ss2",
+        "gender": "female",
+        "date_of_birth": "2005-05-12",
+        "scores": {}
+    },
+    {
+        "student_id": "ST001",
+        "name": "Tosin Ajayi",
+        "class": "ss3",
+        "gender": "female",
+        "date_of_birth": "2008-05-12",
+        "scores": {}
+    }
+]
