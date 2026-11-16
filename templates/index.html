@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Management System</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f6fb;
+        color: #263238;
+    }
+
+    header {
+        background: #172554;
+        color: white;
+        padding: 25px 40px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .container h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .container p {
+        color: #64748b;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: white;
+        width: 250px;
+        padding: 35px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+        margin-bottom: 15px;
+        color: #172554;
+    }
+
+    .card a {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        margin-top: 15px;
+    }
+
+    .card a:hover {
+        background: #1d4ed8;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <div class="container">
+
+        <h2>Welcome to the Dashboard</h2>
+
+        <p>Manage student records and academic results in one place.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Student Records</h3>
+                <p>Manage and view student information.</p>
+                <a href="/students">Get Started</a>
+            </div>
+
+            <div class="card">
+                <h3>Results</h3>
+                <p>Manage student scores and grades.</p>
+                <a href="/view-students">View Students</a>
+            </div>
+
+            <div class="card">
+                <h3>Class Average</h3>
+                <p>View students' academic performance.</p>
+                <a href="/class-average">View Average</a>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

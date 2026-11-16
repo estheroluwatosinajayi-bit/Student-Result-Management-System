@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Average</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #172554;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            margin-top: 8px;
+        }
+
+        button {
+            background: #172554;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .report {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f4f6fb;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .message {
+            color: #dc2626;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <a href="/">← Back to Dashboard</a>
+
+        <h1>Class Average Report</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <p class="message">{{ message }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST">
+            <label>Enter Class Name</label>
+            <input type="text" name="class_name"
+                   placeholder="e.g. 100 Level" required>
+
+            <button type="submit">Generate Report</button>
+        </form>
+
+        {% if report %}
+            <div class="report">
+                <h2>Class: {{ report.class_name }}</h2>
+
+                <p>Number of Students: {{ report.number }}</p>
+
+                <p>Highest Average:
+                    {{ report.highest.name }} -
+                    {{ report.highest.average }}
+                </p>
+
+                <p>Lowest Average:
+                    {{ report.lowest.name }} -
+                    {{ report.lowest.average }}
+                </p>
+
+                <h3>Overall Class Average:
+                    {{ report.average }}
+                </h3>
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
